@@ -1,0 +1,10 @@
+##TreeCount=name
+##cliptoplantationboundary=vector
+##inputnirraster=raster
+##treecountcentroids=output vector
+outputs_SAGACLIPGRIDWITHPOLYGON_1=processing.runalg('saga:clipgridwithpolygon', inputnirraster,cliptoplantationboundary,None)
+outputs_SAGARECLASSIFYGRIDVALUES_1=processing.runalg('saga:reclassifygridvalues', outputs_SAGACLIPGRIDWITHPOLYGON_1['OUTPUT'],2,0.0,1.0,0,0.0,1.0,2.0,0,'0,0,0,0,0,0,0,0,0',0,True,0.0,True,0.0,None)
+outputs_SAGARESAMPLING_1=processing.runalg('saga:resampling', outputs_SAGARECLASSIFYGRIDVALUES_1['RESULT'],True,0,0,None,1.0,0,None,None)
+outputs_GDALOGRPOLYGONIZE_1=processing.runalg('gdalogr:polygonize', outputs_SAGARESAMPLING_1['OUTPUT'],'DN',None)
+outputs_QGISFIXEDDISTANCEBUFFER_1=processing.runalg('qgis:fixeddistancebuffer', outputs_GDALOGRPOLYGONIZE_1['OUTPUT'],-1.0,5.0,False,None)
+outputs_QGISPOLYGONCENTROIDS_1=processing.runalg('qgis:polygoncentroids', outputs_QGISFIXEDDISTANCEBUFFER_1['OUTPUT'],treecountcentroids)
