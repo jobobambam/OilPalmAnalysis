@@ -3,15 +3,15 @@ Examples of basic geoalgorithms used to analyse palm oil plantation metrics.
 
 This repository holds:
 
-x plantation Sabah, Malaysia
+Andamy Properties Plantation Sabah, Malaysia
 
 - Shapefile containing boundary features of the plantation.
-- High resolution open source imagery of the plantation.
-- NDVA and Treecount analysis of the plantation in Sabah.
+- Open source imagery of the plantation.
 
-Unknown Plantation, Bankok Thailand
+Unknown Oil Palm Plantation, Saraburi, Thailand
 
 - Shapefile containing boundary features of the plantation.
-- High resolution open source imagery of the plantation.
-- NDVA and Treecount analysis of the plantation in Sabah.
-- Copy of the script used to create these geoalgorithms.
+- Selection of drone captured multispectral bands: NIR & Red (only those used in analysis were uploaded due to size)
+- NDVA layer
+- Treecount- point shapefile identifying each tree in the plantation found using my treecount algorithm.
+- Copy of the scripts used to create the NDVI and Treecount geoalgorithms.
