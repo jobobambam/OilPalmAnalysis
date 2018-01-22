@@ -11,7 +11,6 @@ x plantation Sabah, Malaysia
 
 Unknown Plantation, Bankok Thailand
 
-=======
 - Shapefile containing boundary features of the plantation.
 - High resolution open source imagery of the plantation.
 - NDVA and Treecount analysis of the plantation in Sabah.
